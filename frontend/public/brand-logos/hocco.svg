@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="72" viewBox="0 0 180 72" role="img" aria-labelledby="title">
+  <title id="title">HOCCO Eatery</title>
+  <rect width="180" height="72" rx="14" fill="#ffffff"/>
+  <text x="27" y="41" font-family="Arial Black, Arial, sans-serif" font-size="32" font-weight="900" fill="#111827">HOCCO</text>
+  <rect x="71" y="15" width="14" height="5" rx="2" fill="#dc2626"/>
+  <text x="72" y="58" font-family="Georgia, serif" font-size="16" font-style="italic" font-weight="700" fill="#334155">eatery</text>
+</svg>

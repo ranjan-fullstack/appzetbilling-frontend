@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="72" viewBox="0 0 180 72" role="img" aria-labelledby="title">
+  <title id="title">La Pinoz Pizza</title>
+  <rect width="180" height="72" rx="14" fill="#ffffff"/>
+  <circle cx="42" cy="36" r="24" fill="#fff7ed" stroke="#238000" stroke-width="3"/>
+  <path d="M30 41c12-18 30-15 26 7" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+  <path d="M39 20c8 10 9 19 2 31" fill="none" stroke="#238000" stroke-width="3" stroke-linecap="round"/>
+  <text x="74" y="34" font-family="Georgia, serif" font-size="20" font-weight="800" fill="#dc2626">La Pinoz</text>
+  <text x="75" y="53" font-family="Arial, sans-serif" font-size="15" font-weight="800" fill="#238000">Pizza</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="72" viewBox="0 0 180 72" role="img" aria-labelledby="title">
+  <title id="title">L Realty</title>
+  <rect width="180" height="72" rx="14" fill="#ffc400"/>
+  <circle cx="45" cy="36" r="20" fill="none" stroke="#111827" stroke-width="4"/>
+  <path d="M34 41h24M45 22v28M45 22l13 19" stroke="#111827" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="74" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#111827">L</text>
+  <text x="74" y="54" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#111827">Realty</text>
+</svg>

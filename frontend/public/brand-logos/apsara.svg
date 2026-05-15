@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="72" viewBox="0 0 180 72" role="img" aria-labelledby="title">
+  <title id="title">Apsara Ice Creams</title>
+  <rect width="180" height="72" rx="14" fill="#ffffff"/>
+  <path d="M25 43c20-30 44-30 65 0" fill="none" stroke="#238000" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="64" cy="23" r="8" fill="#facc15"/>
+  <text x="34" y="45" font-family="Georgia, serif" font-size="24" font-weight="800" fill="#238000">Apsara</text>
+  <text x="60" y="60" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#64748b">ICE CREAMS</text>
+</svg>

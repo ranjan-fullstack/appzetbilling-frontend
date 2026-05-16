@@ -3,7 +3,10 @@ import { ArrowRight, Play } from "lucide-react";
 
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-black min-h-screen">
+    
+     <section className="relative overflow-hidden bg-black min-h-[100svh]">
+
+
       
       {/* BACKGROUND IMAGE */}
       <div
@@ -18,9 +21,15 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/70" />
 
       {/* HERO CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 min-h-screen flex items-center">
+      
+     <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 min-h-[100svh] flex items-center py-28 lg:py-20">
+
+
         
-        <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
+
+
           
           {/* LEFT CONTENT */}
           <div>
@@ -45,16 +54,21 @@ function HeroSection() {
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="mt-10 text-2xl leading-relaxed text-slate-200 max-w-2xl">
+            
+           <p className="mt-6 lg:mt-10 text-lg sm:text-xl lg:text-2xl leading-relaxed text-slate-200 max-w-2xl">
+
+
               AppZet builds premium software products, websites, mobile apps,
               and digital solutions that help businesses automate, scale, and
               grow faster in the modern digital world.
             </p>
 
             {/* BUTTONS */}
-            <div className="mt-12 flex flex-wrap items-center gap-5">
+            
+         <div className="mt-8 lg:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+
               
-              <button className="group inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-2xl text-xl font-semibold transition-all duration-300 shadow-2xl shadow-green-500/20">
+              <button className="group inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-7 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-xl font-semibold transition-all duration-300 shadow-2xl shadow-green-500/20">
                 Explore Products
 
                 <ArrowRight
@@ -63,7 +77,7 @@ function HeroSection() {
                 />
               </button>
 
-              <button className="inline-flex items-center gap-3 border border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-10 py-5 rounded-2xl text-xl font-semibold transition-all duration-300">
+              <button className="inline-flex items-center gap-3 border border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-7 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-xl font-semibold transition-all duration-300">
                 
                 <Play size={22} />
 
@@ -72,7 +86,9 @@ function HeroSection() {
             </div>
 
             {/* SERVICE TAGS */}
-            <div className="mt-16 flex flex-wrap gap-4">
+            
+           <div className="mt-10 lg:mt-16 flex flex-wrap gap-3">
+
               
               <div className="px-6 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md">
                 <p className="text-white font-semibold text-lg">

@@ -1,14 +1,17 @@
+import logo from "../../assets/weblogo-w-400x121.png";
 function Footer() {
   return (
     <footer className="bg-slate-950 text-white py-20">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <div>
-          <h2 className="text-3xl font-black text-green-500">AppZet</h2>
-
-          <p className="mt-6 text-slate-400 leading-relaxed">
-            Smart business solutions for modern enterprises.
-          </p>
-        </div>
+        {/* LOGO */}
+<div className="flex items-center cursor-pointer">
+  
+  <img
+    src={logo}
+    alt="AppZet Logo"
+    className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
+  />
+</div>
 
         <div>
           <h3 className="text-xl font-bold">Products</h3>

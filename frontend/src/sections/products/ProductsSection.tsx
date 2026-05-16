@@ -1,10 +1,10 @@
 import { ArrowRight } from 'lucide-react'
-import { Reveal } from '../components/Reveal'
-import { SectionHeading } from '../components/SectionHeading'
-import { productItems } from '../data/siteData'
-import { openLeadForm } from '../utils/leadForm'
+import { Reveal } from '../../components/Reveal'
+import { SectionHeading } from '../../components/SectionHeading'
+import { productItems } from '../../data/siteData'
+import { openLeadForm } from '../../utils/leadForm'
 
-export function ProductsSection() {
+function ProductsSection() {
   const showFormForProduct = (interest: string) => {
     const formInterest = {
       'Restaurant POS': 'Restaurant POS - For Food & Beverage Industry',
@@ -59,3 +59,5 @@ export function ProductsSection() {
     </section>
   )
 }
+
+export default ProductsSection;

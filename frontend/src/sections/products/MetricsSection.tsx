@@ -1,7 +1,7 @@
-import { Counter } from '../components/Counter'
-import { metrics } from '../data/siteData'
+import { Counter } from '../../components/Counter'
+import { metrics } from '../../data/siteData'
 
-export function MetricsSection() {
+function MetricsSection() {
   return (
     <section id="pricing" className="bg-[#103f00] px-4 py-12 text-white sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-4">
@@ -17,3 +17,5 @@ export function MetricsSection() {
     </section>
   )
 }
+
+export default MetricsSection;

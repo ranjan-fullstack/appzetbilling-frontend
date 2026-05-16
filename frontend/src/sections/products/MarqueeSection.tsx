@@ -1,6 +1,6 @@
-import { marqueeItems } from '../data/siteData'
+import { marqueeItems } from '../../data/siteData'
 
-export function MarqueeSection() {
+function MarqueeSection() {
   const items = [...marqueeItems, ...marqueeItems]
 
   return (
@@ -18,3 +18,4 @@ export function MarqueeSection() {
     </section>
   )
 }
+export default MarqueeSection;

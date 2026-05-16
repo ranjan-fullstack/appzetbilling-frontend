@@ -1,9 +1,9 @@
 import { ArrowRight, PhoneCall } from 'lucide-react'
-import { Button } from '../components/Button'
-import { openLeadForm } from '../utils/leadForm'
-import { openWhatsApp } from '../utils/whatsapp'
+import { Button } from '../../components/Button'
+import { openLeadForm } from '../../utils/leadForm'
+import { openWhatsApp } from '../../utils/whatsapp'
 
-export function CTASection() {
+ function CTASection() {
   return (
     <section id="cta" className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl bg-gradient-to-br from-[#2f9900] via-[#238000] to-[#1f7000] px-6 py-16 text-center text-white shadow-soft sm:px-10">
@@ -33,3 +33,4 @@ export function CTASection() {
     </section>
   )
 }
+export default CTASection;

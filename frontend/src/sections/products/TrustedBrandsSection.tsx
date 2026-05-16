@@ -10,7 +10,7 @@ const brands = [
   { name: 'Cafe Metro', logo: '/brand-logos/cafe-metro.svg' },
 ]
 
-export function TrustedBrandsSection() {
+function TrustedBrandsSection() {
   const scrollingBrands = [...brands, ...brands]
 
   return (
@@ -40,3 +40,5 @@ export function TrustedBrandsSection() {
     </section>
   )
 }
+
+export default TrustedBrandsSection;

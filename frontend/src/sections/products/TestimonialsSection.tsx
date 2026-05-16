@@ -1,9 +1,9 @@
 import { Star } from 'lucide-react'
-import { Reveal } from '../components/Reveal'
-import { SectionHeading } from '../components/SectionHeading'
-import { testimonials } from '../data/siteData'
+import { Reveal } from '../../components/Reveal'
+import { SectionHeading } from '../../components/SectionHeading'
+import { testimonials } from '../../data/siteData'
 
-export function TestimonialsSection() {
+function TestimonialsSection() {
   return (
     <section id="testimonials" className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
@@ -41,3 +41,5 @@ export function TestimonialsSection() {
     </section>
   )
 }
+
+export default TestimonialsSection;

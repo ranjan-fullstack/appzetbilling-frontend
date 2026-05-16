@@ -1,7 +1,7 @@
 import { Send } from 'lucide-react'
 import { type FormEvent, useEffect, useState } from 'react'
-import { Reveal } from '../components/Reveal'
-import { apiUrl } from '../utils/api'
+import { Reveal } from '../../components/Reveal'
+import { apiUrl } from '../../utils/api'
 
 const interests = [
   'Restaurant POS - For Food & Beverage Industry',
@@ -22,7 +22,7 @@ const initialForm = {
   message: '',
 }
 
-export function LeadFormSection() {
+function LeadFormSection() {
   const [form, setForm] = useState(initialForm)
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
 
@@ -187,3 +187,5 @@ export function LeadFormSection() {
     </section>
   )
 }
+
+export default LeadFormSection;

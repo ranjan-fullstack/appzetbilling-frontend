@@ -1,10 +1,10 @@
 import { BarChart3, CheckCircle2, IndianRupee } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { Reveal } from '../components/Reveal'
-import { SectionHeading } from '../components/SectionHeading'
-import { featureItems } from '../data/siteData'
+import { Reveal } from '../../components/Reveal'
+import { SectionHeading } from '../../components/SectionHeading'
+import { featureItems } from '../../data/siteData'
 
-export function WhyChooseSection() {
+function WhyChooseSection() {
   const stats: Array<{ label: string; value: string; icon: LucideIcon }> = [
     { label: 'Net Sales', value: 'Rs 14.8L', icon: IndianRupee },
     { label: 'GST Filed', value: '98%', icon: CheckCircle2 },
@@ -79,3 +79,5 @@ export function WhyChooseSection() {
     </section>
   )
 }
+
+export default WhyChooseSection;

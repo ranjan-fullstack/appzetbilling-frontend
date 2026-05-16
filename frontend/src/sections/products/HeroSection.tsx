@@ -1,10 +1,10 @@
 import { CalendarCheck, Star, Users } from 'lucide-react'
-import { Button } from '../components/Button'
-import { DashboardMockup } from '../components/DashboardMockup'
-import { Reveal } from '../components/Reveal'
-import { openLeadForm } from '../utils/leadForm'
+import { Button } from '../../components/Button'
+import { DashboardMockup } from '../../components/DashboardMockup'
+import { Reveal } from '../../components/Reveal'
+import { openLeadForm } from '../../utils/leadForm'
 
-export function HeroSection() {
+function HeroSection() {
   return (
     <section
       id="home"
@@ -58,3 +58,5 @@ export function HeroSection() {
     </section>
   )
 }
+
+export default HeroSection;

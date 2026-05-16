@@ -67,7 +67,7 @@ function HeroSection() {
             
          <div className="mt-8 lg:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
 
-              
+              <a href="#products">
               <button className="group inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-7 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-xl font-semibold transition-all duration-300 shadow-2xl shadow-green-500/20">
                 Explore Products
 
@@ -76,13 +76,15 @@ function HeroSection() {
                   className="group-hover:translate-x-1 transition"
                 />
               </button>
-
+              </a>
+             <a href="#services">
               <button className="inline-flex items-center gap-3 border border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-7 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-xl font-semibold transition-all duration-300">
                 
                 <Play size={22} />
 
                 View Services
               </button>
+              </a>
             </div>
 
             {/* SERVICE TAGS */}

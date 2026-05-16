@@ -71,9 +71,14 @@ function Navbar() {
 
           {/* DESKTOP BUTTON */}
           <div className="hidden lg:flex items-center gap-4">
-            <button className="px-7 py-3 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-semibold transition shadow-lg shadow-green-500/20">
-              Get Started
-            </button>
+           
+<a href="#contact" onClick={() => setMobileMenu(false)}>
+  <button className="px-7 py-3 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-semibold transition shadow-lg shadow-green-500/20">
+    Get Started
+  </button>
+</a>
+
+
           </div>
 
           {/* MOBILE MENU BUTTON */}
@@ -149,12 +154,21 @@ function Navbar() {
             </a>
 
             {/* MOBILE BUTTON */}
-            <button
-              onClick={() => setMobileMenu(false)}
-              className="mt-4 w-full py-3 sm:py-4 rounded-2xl bg-green-500 hover:bg-green-600 text-white text-base sm:text-lg font-semibold transition shadow-lg shadow-green-500/20"
-            >
-              Get Started
-            </button>
+         
+
+
+           
+<a href="#contact" onClick={() => setMobileMenu(false)}>
+  <button className="mt-4 w-full py-3 sm:py-4 rounded-2xl bg-green-500 hover:bg-green-600 text-white text-base sm:text-lg font-semibold transition shadow-lg shadow-green-500/20">
+    Get Started
+  </button>
+</a>
+
+
+
+
+
+
           </div>
         </div>
       </div>

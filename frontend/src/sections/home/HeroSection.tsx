@@ -1,250 +1,227 @@
 
-import { ArrowRight, Play } from "lucide-react";
+import { useEffect, useState } from "react";
 
 function HeroSection() {
+
+  const heroImages = [
+    "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070&auto=format&fit=crop",
+
+    "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070&auto=format&fit=crop",
+
+    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
+  ];
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setCurrentImage((prev) =>
+        prev === heroImages.length - 1 ? 0 : prev + 1
+      );
+
+    }, 3000);
+
+    return () => clearInterval(interval);
+
+  }, [heroImages.length]);
+
   return (
     
-     <section className="relative overflow-hidden bg-black min-h-[100svh]">
+<section
+  id="home"
+  className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20"
+>
+
+  {/* BACKGROUND IMAGE */}
+  <div className="absolute inset-0">
+    
+    <img
+      src={heroImages[currentImage]}
+      alt="POS Billing"
+      className="w-full h-full object-cover"
+    />
+
+    {/* DARK OVERLAY */}
+    <div className="absolute inset-0 bg-black/65" />
+  </div>
 
 
-      
-      {/* BACKGROUND IMAGE */}
-      <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop')",
-        }}
-      />
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/70" />
-
-      {/* HERO CONTENT */}
-      
-     <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 min-h-[100svh] flex items-center py-28 lg:py-20">
+    <div className="grid lg:grid-cols-2 gap-14 items-center">
 
 
-        
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
+      {/* LEFT CONTENT */}
+      <div className="max-w-[580px]">
+
+        {/* BADGE */}
+        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/10 backdrop-blur-xl mb-6">
+
+          <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
+
+          <span className="text-white text-xs sm:text-sm font-medium">
+            Smart Business Technology Partner
+          </span>
+        </div>
 
 
-          
-          {/* LEFT CONTENT */}
-          <div>
-            
-            {/* BADGE */}
-            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/10 border border-white/10 backdrop-blur-md text-white mb-8">
-              
-              <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
+        {/* HEADING */}
+        <h1 className="font-black leading-[1] text-white">
 
-              <span className="font-medium">
-                Smart Business Technology Partner
-              </span>
-            </div>
+          <span className="block text-4xl sm:text-5xl lg:text-6xl">
+            Smart
+          </span>
 
-            {/* TITLE */}
-            <h1 className="text-6xl lg:text-8xl font-black text-white leading-[0.95] tracking-tight">
-              Smart
-              <span className="text-green-500"> Products</span>
-              <br />
-              &
-              <span className="text-green-500"> Services</span>
-            </h1>
+          <span className="block text-green-500 text-4xl sm:text-5xl lg:text-6xl mt-2">
+            Products
+          </span>
 
-            {/* DESCRIPTION */}
-            
-           <p className="mt-6 lg:mt-10 text-lg sm:text-xl lg:text-2xl leading-relaxed text-slate-200 max-w-2xl">
+          <span className="block text-4xl sm:text-5xl lg:text-6xl mt-2">
+            &
+          </span>
+
+          <span className="block text-4xl sm:text-5xl lg:text-6xl mt-2">
+            Services
+          </span>
+        </h1>
 
 
-              AppZet builds premium software products, websites, mobile apps,
-              and digital solutions that help businesses automate, scale, and
-              grow faster in the modern digital world.
-            </p>
+        {/* DESCRIPTION */}
+        <p className="mt-6 text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-[500px]">
 
-            {/* BUTTONS */}
-            
-         <div className="mt-8 lg:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+           AppZet provides powerful software products, 
+  business websites, mobile applications, 
+  POS billing systems, and digital services 
+  that help startups and businesses automate, 
+  manage, and scale efficiently in the modern digital world.
 
-              <a href="#products">
-              <button className="group inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-7 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-xl font-semibold transition-all duration-300 shadow-2xl shadow-green-500/20">
-                Explore Products
+        </p>
 
-                <ArrowRight
-                  size={24}
-                  className="group-hover:translate-x-1 transition"
-                />
-              </button>
-              </a>
-             <a href="#services">
-              <button className="inline-flex items-center gap-3 border border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-7 sm:px-10 py-4 sm:py-5 rounded-2xl text-base sm:text-xl font-semibold transition-all duration-300">
-                
-                <Play size={22} />
 
-                View Services
-              </button>
-              </a>
-            </div>
+        {/* BUTTONS */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
 
-            {/* SERVICE TAGS */}
-            
-           <div className="mt-10 lg:mt-16 flex flex-wrap gap-3">
+          <a
+            href="#products"
+            className="px-7 py-4 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-bold text-center transition shadow-xl shadow-green-500/30"
+          >
+            Explore Products
+          </a>
 
-              
-              <div className="px-6 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md">
-                <p className="text-white font-semibold text-lg">
-                  Billing Software
+          <a
+            href="#services"
+            className="px-7 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl text-white font-bold text-center hover:bg-white/20 transition"
+          >
+            View Services
+          </a>
+
+        </div>
+      </div>
+
+
+
+      {/* RIGHT SIDE DASHBOARD */}
+      <div className="hidden lg:flex justify-end">
+
+        <div className="w-full max-w-[380px] xl:max-w-[420px] scale-90 xl:scale-100">
+
+          <div className="rounded-[32px] border border-white/10 bg-white/10 backdrop-blur-2xl overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
+
+
+            {/* HEADER */}
+            <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
+
+              <div>
+
+                <h3 className="text-2xl xl:text-3xl font-bold text-white">
+                  AppZet Dashboard
+                </h3>
+
+                <p className="text-slate-300 mt-1 text-sm">
+                  Live POS Analytics
                 </p>
+
               </div>
 
-              <div className="px-6 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md">
-                <p className="text-white font-semibold text-lg">
-                  Website Development
-                </p>
-              </div>
-
-              <div className="px-6 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md">
-                <p className="text-white font-semibold text-lg">
-                  Mobile App Development
-                </p>
-              </div>
-
-              <div className="px-6 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md">
-                <p className="text-white font-semibold text-lg">
-                  Digital Marketing
-                </p>
-              </div>
-
-              <div className="px-6 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md">
-                <p className="text-white font-semibold text-lg">
-                  ERP Solutions
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="relative hidden lg:flex justify-center">
-            
-            {/* MAIN DASHBOARD */}
-            <div className="relative w-[520px] h-[620px] rounded-[40px] bg-white/10 border border-white/10 backdrop-blur-2xl overflow-hidden shadow-2xl">
-              
-              {/* HEADER */}
-              <div className="flex items-center justify-between px-8 py-6 border-b border-white/10">
-                
-                <div>
-                  <h3 className="text-2xl font-black text-white">
-                    AppZet Dashboard
-                  </h3>
-
-                  <p className="text-slate-300 mt-1">
-                    Live Business Analytics
-                  </p>
-                </div>
-
-                <div className="w-16 h-16 rounded-2xl bg-green-500 flex items-center justify-center text-white text-2xl font-black">
-                  AZ
-                </div>
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-8">
-                
-                {/* TOP CARDS */}
-                <div className="grid grid-cols-2 gap-5">
-                  
-                  <div className="rounded-3xl bg-white/10 p-6 border border-white/10">
-                    <p className="text-slate-300">
-                      Active Projects
-                    </p>
-
-                    <h4 className="mt-3 text-4xl font-black text-white">
-                      120+
-                    </h4>
-
-                    <span className="mt-3 inline-block text-green-400 font-semibold">
-                      Running
-                    </span>
-                  </div>
-
-                  <div className="rounded-3xl bg-white/10 p-6 border border-white/10">
-                    <p className="text-slate-300">
-                      Software Products
-                    </p>
-
-                    <h4 className="mt-3 text-4xl font-black text-white">
-                      25+
-                    </h4>
-
-                    <span className="mt-3 inline-block text-green-400 font-semibold">
-                      Live
-                    </span>
-                  </div>
-                </div>
-
-                {/* GRAPH */}
-                <div className="mt-8 rounded-3xl bg-white/10 border border-white/10 p-8">
-                  
-                  <div className="flex items-end gap-4 h-52">
-                    <div className="w-10 h-24 rounded-t-2xl bg-green-300" />
-                    <div className="w-10 h-36 rounded-t-2xl bg-green-400" />
-                    <div className="w-10 h-28 rounded-t-2xl bg-green-500" />
-                    <div className="w-10 h-44 rounded-t-2xl bg-green-600" />
-                    <div className="w-10 h-52 rounded-t-2xl bg-green-500" />
-                    <div className="w-10 h-40 rounded-t-2xl bg-green-400" />
-                  </div>
-
-                  <p className="mt-6 text-slate-300">
-                    Weekly Product Performance
-                  </p>
-                </div>
-
-                {/* BOTTOM CARDS */}
-                <div className="mt-8 grid grid-cols-2 gap-5">
-                  
-                  <div className="rounded-3xl bg-green-500 p-6">
-                    <p className="text-white/80">
-                      Business Growth
-                    </p>
-
-                    <h4 className="mt-3 text-5xl font-black text-white">
-                      95%
-                    </h4>
-                  </div>
-
-                  <div className="rounded-3xl bg-white/10 border border-white/10 p-6">
-                    <p className="text-slate-300">
-                      Industries Served
-                    </p>
-
-                    <h4 className="mt-3 text-5xl font-black text-white">
-                      15+
-                    </h4>
-                  </div>
-                </div>
+              <div className="w-14 h-14 rounded-2xl bg-green-500 flex items-center justify-center text-white text-xl font-black shadow-lg shadow-green-500/30">
+                AZ
               </div>
             </div>
 
-            {/* FLOATING CARD */}
-            <div className="absolute -bottom-10 -left-10 bg-white rounded-3xl p-6 shadow-2xl">
-              
-              <p className="text-slate-500">
-                New Businesses
-              </p>
 
-              <h4 className="mt-2 text-4xl font-black text-slate-900">
-                +2.5K
-              </h4>
 
-              <span className="mt-2 inline-block text-green-600 font-semibold">
-                This Month
-              </span>
+            {/* STATS */}
+            <div className="grid grid-cols-2 gap-4 p-5">
+
+              {/* CARD */}
+              <div className="rounded-[24px] bg-white/10 border border-white/10 p-5">
+
+                <p className="text-slate-300 text-sm">
+                  Daily Bills
+                </p>
+
+                <h2 className="text-4xl font-black text-white mt-2">
+                  5K+
+                </h2>
+
+                <span className="text-green-400 font-semibold text-sm mt-2 block">
+                  Generated
+                </span>
+              </div>
+
+
+              {/* CARD */}
+              <div className="rounded-[24px] bg-white/10 border border-white/10 p-5">
+
+                <p className="text-slate-300 text-sm">
+                  GST Reports
+                </p>
+
+                <h2 className="text-4xl font-black text-white mt-2">
+                  100%
+                </h2>
+
+                <span className="text-green-400 font-semibold text-sm mt-2 block">
+                  Automated
+                </span>
+              </div>
             </div>
+
+
+
+            {/* GRAPH */}
+            <div className="px-5 pb-5">
+
+              <div className="relative h-[220px] rounded-[28px] bg-white/10 border border-white/10 p-6 flex items-end justify-center gap-4 overflow-hidden">
+
+                {/* GLOW */}
+                <div className="absolute bottom-0 w-64 h-32 bg-green-500/10 blur-3xl rounded-full" />
+
+                <div className="relative w-9 rounded-full bg-green-300 h-24" />
+
+                <div className="relative w-9 rounded-full bg-green-400 h-36" />
+
+                <div className="relative w-9 rounded-full bg-green-500 h-48" />
+
+                <div className="relative w-9 rounded-full bg-green-600 h-56" />
+
+                <div className="relative w-9 rounded-full bg-green-400 h-40" />
+
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-    </section>
+
+
+    </div>
+  </div>
+</section>
+
   );
 }
 

@@ -12,9 +12,9 @@ const services = [
     title: "Software Development",
     desc: "Custom scalable business software solutions for startups and enterprises.",
     icon: Code2,
-    bg: "from-green-100 to-emerald-50",
-    iconBg: "bg-green-500",
-    glow: "bg-green-400/20",
+    bg: "from-blue-100 to-sky-50",
+    iconBg: "bg-blue-600",
+    glow: "bg-blue-400/20",
   },
   {
     title: "Website Development",
@@ -54,7 +54,7 @@ function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-24 bg-gradient-to-b from-white to-slate-50"
+      className="scroll-mt-24 lg:scroll-mt-36 py-24 bg-gradient-to-b from-white to-slate-50"
     >
       <div className="max-w-7xl mx-auto px-6">
         
@@ -63,7 +63,7 @@ function ServicesSection() {
           
           <h2 className="text-5xl lg:text-6xl font-black text-slate-900">
             Our
-            <span className="text-green-500"> Services</span>
+            <span className="text-blue-600"> Services</span>
           </h2>
 
           <p className="mt-6 text-xl text-slate-600 leading-relaxed">
@@ -124,7 +124,7 @@ function ServicesSection() {
                   </div>
 
                   {/* HOVER LINE */}
-                  <div className="absolute bottom-0 left-0 h-2 w-0 bg-green-500 group-hover:w-full transition-all duration-500 rounded-full" />
+                  <div className="absolute bottom-0 left-0 h-2 w-0 bg-blue-600 group-hover:w-full transition-all duration-500 rounded-full" />
                 </div>
               </div>
             );

@@ -1,19 +1,22 @@
 
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { productItems } from "../../data/siteData";
 
 function ProductsShowcaseSection() {
   return (
     <section
       id="products"
-      className="py-28 bg-gradient-to-b from-white to-green-50/30"
+      className="scroll-mt-24 lg:scroll-mt-36 py-28 bg-gradient-to-b from-white to-blue-50/40"
     >
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* HEADING */}
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-5xl lg:text-6xl font-black text-slate-900">
-            Our <span className="text-green-600">Products</span>
+          <p className="text-sm font-bold uppercase tracking-widest text-blue-600">
+            Our Products
+          </p>
+          <h2 className="mt-3 text-5xl lg:text-6xl font-black text-slate-900">
+            One Platform, <span className="text-blue-600">Every Module</span>
           </h2>
 
           <p className="mt-6 text-xl text-slate-500">
@@ -22,21 +25,18 @@ function ProductsShowcaseSection() {
           </p>
         </div>
 
-        {/* PRODUCT GRID */}
-        <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          {/* CARD */}
-          <div className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white hover:border-green-200 shadow-sm hover:shadow-2xl transition-all duration-500">
-            
+        {/* FLAGSHIP CARD */}
+        <div className="mt-16 group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white hover:border-blue-200 shadow-sm hover:shadow-2xl transition-all duration-500 grid lg:grid-cols-2">
+
 {/* TOP SECTION */}
-<div className="relative h-[240px] bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center overflow-hidden">
-  
+<div className="relative h-[280px] lg:h-auto bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+
   {/* BACKGROUND GLOW */}
-  <div className="absolute w-56 h-56 rounded-full bg-green-200/30 blur-3xl" />
+  <div className="absolute w-56 h-56 rounded-full bg-blue-200/30 blur-3xl" />
 
   {/* BILL PAPER */}
-  <div className="relative z-10 w-52 bg-white rounded-[26px] shadow-2xl rotate-[-8deg] border border-green-100 p-5">
-    
+  <div className="relative z-10 w-52 bg-white rounded-[26px] shadow-2xl rotate-[-8deg] border border-blue-100 p-5">
+
     {/* BILL HEADER */}
     <div className="flex items-center justify-between">
       <div>
@@ -49,7 +49,7 @@ function ProductsShowcaseSection() {
         </p>
       </div>
 
-      <div className="w-10 h-10 rounded-xl bg-green-500 flex items-center justify-center text-white font-bold">
+      <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold">
         ₹
       </div>
     </div>
@@ -59,14 +59,14 @@ function ProductsShowcaseSection() {
 
     {/* BILL ITEMS */}
     <div className="mt-4 space-y-3">
-      
+
       <div className="flex items-center justify-between">
         <div>
           <div className="w-20 h-2 rounded-full bg-slate-200" />
           <div className="w-12 h-2 rounded-full bg-slate-100 mt-2" />
         </div>
 
-        <div className="w-10 h-2 rounded-full bg-green-300" />
+        <div className="w-10 h-2 rounded-full bg-blue-300" />
       </div>
 
       <div className="flex items-center justify-between">
@@ -75,7 +75,7 @@ function ProductsShowcaseSection() {
           <div className="w-14 h-2 rounded-full bg-slate-100 mt-2" />
         </div>
 
-        <div className="w-12 h-2 rounded-full bg-green-400" />
+        <div className="w-12 h-2 rounded-full bg-blue-400" />
       </div>
 
       <div className="flex items-center justify-between">
@@ -84,29 +84,29 @@ function ProductsShowcaseSection() {
           <div className="w-10 h-2 rounded-full bg-slate-100 mt-2" />
         </div>
 
-        <div className="w-8 h-2 rounded-full bg-green-300" />
+        <div className="w-8 h-2 rounded-full bg-blue-300" />
       </div>
     </div>
 
     {/* TOTAL */}
-    <div className="mt-5 p-3 rounded-2xl bg-green-50 border border-green-100 flex items-center justify-between">
+    <div className="mt-5 p-3 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-between">
       <span className="text-sm font-semibold text-slate-700">
         Total
       </span>
 
-      <span className="text-lg font-black text-green-600">
+      <span className="text-lg font-black text-blue-600">
         ₹24,580
       </span>
     </div>
   </div>
 
   {/* FLOATING SUCCESS CARD */}
-  <div className="absolute right-8 bottom-8 bg-white px-4 py-3 rounded-2xl shadow-lg border border-green-100">
+  <div className="absolute right-8 bottom-8 bg-white px-4 py-3 rounded-2xl shadow-lg border border-blue-100">
     <p className="text-xs text-slate-400">
       Billing Accuracy
     </p>
 
-    <h5 className="text-2xl font-black text-green-600">
+    <h5 className="text-2xl font-black text-blue-600">
       99%
     </h5>
   </div>
@@ -115,11 +115,11 @@ function ProductsShowcaseSection() {
 
 
             {/* CONTENT */}
-            <div className="p-7">
-              
+            <div className="p-8 lg:p-12 flex flex-col justify-center">
+
               {/* LOGO + TITLE */}
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-400 flex items-center justify-center text-white text-2xl font-black shadow-lg">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center text-white text-2xl font-black shadow-lg">
                   AB
                 </div>
 
@@ -128,25 +128,59 @@ function ProductsShowcaseSection() {
                     AppzetBilling
                   </h3>
 
-                  <div className="mt-2 w-14 h-1 rounded-full bg-green-500" />
+                  <div className="mt-2 w-14 h-1 rounded-full bg-blue-600" />
                 </div>
               </div>
 
-             
+              <p className="mt-6 text-slate-600 leading-relaxed max-w-md">
+                A complete POS billing suite with GST-ready invoices, real-time
+                inventory, and cloud sync built into every module below.
+              </p>
 
               {/* BUTTONS */}
-              <div className="mt-8 flex items-center justify-between">
+              <div className="mt-8 flex items-center">
 
-                <Link
-                  to="/products/appzetbilling"
-                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                <a
+                  href="https://appzetsbilling.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
                 >
-                  Explore
+                  Explore AppzetBilling
                   <ArrowRight size={18} />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
+
+        {/* MODULE GRID */}
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {productItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.title}
+                className="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-blue-200 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300 shrink-0">
+                    <Icon className="text-blue-600 group-hover:text-white transition-colors duration-300" size={22} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">{item.title}</h4>
+                    {item.status && (
+                      <span className="text-[11px] font-bold uppercase tracking-wide text-blue-600">
+                        {item.status}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                  {item.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

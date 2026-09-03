@@ -10,10 +10,10 @@ export default {
         body: ['Plus Jakarta Sans', 'sans-serif'],
       },
       colors: {
-        primary: '#238000',
-        secondary: '#0f172a',
-        bg: '#f4ffe8',
-        surface: '#f1ffe8',
+        primary: '#2563eb',
+        secondary: '#0b1220',
+        bg: '#f5f8ff',
+        surface: '#ffffff',
         text: '#1e293b',
       },
       boxShadow: {

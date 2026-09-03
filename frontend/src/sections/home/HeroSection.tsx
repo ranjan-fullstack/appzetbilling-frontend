@@ -1,4 +1,5 @@
 
+import { ShieldCheck, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 
 function HeroSection() {
@@ -28,195 +29,118 @@ function HeroSection() {
   }, [heroImages.length]);
 
   return (
-    
+
 <section
   id="home"
-  className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20"
+  className="relative min-h-screen flex items-center overflow-hidden pt-40 lg:pt-44 pb-20"
 >
 
   {/* BACKGROUND IMAGE */}
   <div className="absolute inset-0">
-    
+
     <img
       src={heroImages[currentImage]}
       alt="POS Billing"
       className="w-full h-full object-cover"
     />
 
-    {/* DARK OVERLAY */}
-    <div className="absolute inset-0 bg-black/65" />
+    {/* BLUE GRADIENT OVERLAY */}
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-950/95 via-blue-900/92 to-blue-800/85" />
+    <div className="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-950/30 to-transparent" />
   </div>
 
 
   {/* CONTENT */}
   <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
 
-    <div className="grid lg:grid-cols-2 gap-14 items-center">
+    <div className="relative max-w-3xl">
 
+      {/* BADGE */}
+      <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/10 backdrop-blur-xl mb-6">
 
-      {/* LEFT CONTENT */}
-      <div className="max-w-[580px]">
+        <div className="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse" />
 
-        {/* BADGE */}
-        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/10 backdrop-blur-xl mb-6">
-
-          <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-
-          <span className="text-white text-xs sm:text-sm font-medium">
-            Smart Business Technology Partner
-          </span>
-        </div>
-
-
-        {/* HEADING */}
-        <h1 className="font-black leading-[1] text-white">
-
-          <span className="block text-4xl sm:text-5xl lg:text-6xl">
-            Smart
-          </span>
-
-          <span className="block text-green-500 text-4xl sm:text-5xl lg:text-6xl mt-2">
-            Products
-          </span>
-
-          <span className="block text-4xl sm:text-5xl lg:text-6xl mt-2">
-            &
-          </span>
-
-          <span className="block text-4xl sm:text-5xl lg:text-6xl mt-2">
-            Services
-          </span>
-        </h1>
-
-
-        {/* DESCRIPTION */}
-        <p className="mt-6 text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-[500px]">
-
-           AppZet provides powerful software products, 
-  business websites, mobile applications, 
-  POS billing systems, and digital services 
-  that help startups and businesses automate, 
-  manage, and scale efficiently in the modern digital world.
-
-        </p>
-
-
-        {/* BUTTONS */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
-
-          <a
-            href="#products"
-            className="px-7 py-4 rounded-2xl bg-green-500 hover:bg-green-600 text-white font-bold text-center transition shadow-xl shadow-green-500/30"
-          >
-            Explore Products
-          </a>
-
-          <a
-            href="#services"
-            className="px-7 py-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-xl text-white font-bold text-center hover:bg-white/20 transition"
-          >
-            View Services
-          </a>
-
-        </div>
+        <span className="text-white text-xs sm:text-sm font-semibold tracking-wide uppercase">
+          Smart Business Technology Partner
+        </span>
       </div>
 
 
+      {/* HEADING */}
+      <h1 className="font-black leading-[1.05]">
 
-      {/* RIGHT SIDE DASHBOARD */}
-      <div className="hidden lg:flex justify-end">
+        <span className="block text-4xl sm:text-5xl lg:text-6xl text-white">
+          Smart Software.
+        </span>
 
-        <div className="w-full max-w-[380px] xl:max-w-[420px] scale-90 xl:scale-100">
+        <span className="block text-orange-500 text-4xl sm:text-5xl lg:text-6xl mt-2">
+          Powerful Billing.
+        </span>
 
-          <div className="rounded-[32px] border border-white/10 bg-white/10 backdrop-blur-2xl overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
-
-
-            {/* HEADER */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
-
-              <div>
-
-                <h3 className="text-2xl xl:text-3xl font-bold text-white">
-                  AppZet Dashboard
-                </h3>
-
-                <p className="text-slate-300 mt-1 text-sm">
-                  Live POS Analytics
-                </p>
-
-              </div>
-
-              <div className="w-14 h-14 rounded-2xl bg-green-500 flex items-center justify-center text-white text-xl font-black shadow-lg shadow-green-500/30">
-                AZ
-              </div>
-            </div>
+        <span className="block text-sky-300 text-4xl sm:text-5xl lg:text-6xl mt-2">
+          Real Growth.
+        </span>
+      </h1>
 
 
-
-            {/* STATS */}
-            <div className="grid grid-cols-2 gap-4 p-5">
-
-              {/* CARD */}
-              <div className="rounded-[24px] bg-white/10 border border-white/10 p-5">
-
-                <p className="text-slate-300 text-sm">
-                  Daily Bills
-                </p>
-
-                <h2 className="text-4xl font-black text-white mt-2">
-                  5K+
-                </h2>
-
-                <span className="text-green-400 font-semibold text-sm mt-2 block">
-                  Generated
-                </span>
-              </div>
+      {/* DESCRIPTION */}
+      <p className="mt-6 text-sm sm:text-base lg:text-lg text-blue-100/80 leading-relaxed max-w-[540px]">
+        AppZet provides powerful software products, business websites, mobile
+        applications, POS billing systems, and digital services that help
+        startups and businesses automate, manage, and scale efficiently in the
+        modern digital world.
+      </p>
 
 
-              {/* CARD */}
-              <div className="rounded-[24px] bg-white/10 border border-white/10 p-5">
+      {/* BUTTONS */}
+      <div className="flex flex-col sm:flex-row gap-4 mt-8">
 
-                <p className="text-slate-300 text-sm">
-                  GST Reports
-                </p>
+        <a
+          href="#products"
+          className="px-8 py-4 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-center transition shadow-xl shadow-orange-500/30"
+        >
+          Explore Products
+        </a>
 
-                <h2 className="text-4xl font-black text-white mt-2">
-                  100%
-                </h2>
+        <a
+          href="#services"
+          className="px-8 py-4 rounded-full bg-transparent border border-white/40 text-white font-bold text-center hover:bg-white/10 transition"
+        >
+          View Services
+        </a>
 
-                <span className="text-green-400 font-semibold text-sm mt-2 block">
-                  Automated
-                </span>
-              </div>
-            </div>
+      </div>
 
-
-
-            {/* GRAPH */}
-            <div className="px-5 pb-5">
-
-              <div className="relative h-[220px] rounded-[28px] bg-white/10 border border-white/10 p-6 flex items-end justify-center gap-4 overflow-hidden">
-
-                {/* GLOW */}
-                <div className="absolute bottom-0 w-64 h-32 bg-green-500/10 blur-3xl rounded-full" />
-
-                <div className="relative w-9 rounded-full bg-green-300 h-24" />
-
-                <div className="relative w-9 rounded-full bg-green-400 h-36" />
-
-                <div className="relative w-9 rounded-full bg-green-500 h-48" />
-
-                <div className="relative w-9 rounded-full bg-green-600 h-56" />
-
-                <div className="relative w-9 rounded-full bg-green-400 h-40" />
-
-              </div>
-            </div>
-
+      {/* FLOATING CARD 1 */}
+      <div className="hidden lg:block absolute top-2 right-[-40px] xl:right-[-90px] w-64 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 p-5 shadow-2xl">
+        <div className="flex items-center gap-3">
+          <div className="w-11 h-11 rounded-xl bg-orange-500 flex items-center justify-center shrink-0">
+            <Zap className="h-5 w-5 text-white" />
+          </div>
+          <div>
+            <p className="text-white font-bold text-sm">Fast Billing</p>
+            <p className="text-blue-100/70 text-xs mt-0.5">60-second checkout</p>
           </div>
         </div>
       </div>
 
+      {/* FLOATING CARD 2 */}
+      <div className="hidden lg:block absolute bottom-[-36px] right-[-10px] xl:right-[-40px] w-72 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/10 p-5 shadow-2xl">
+        <div className="flex items-center gap-3">
+          <div className="w-11 h-11 rounded-xl bg-orange-500 flex items-center justify-center shrink-0">
+            <ShieldCheck className="h-5 w-5 text-white" />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center justify-between">
+              <p className="text-white font-bold text-sm">Billing Accuracy</p>
+              <span className="text-orange-400 font-black text-sm">99%</span>
+            </div>
+            <div className="mt-2 h-1.5 w-full rounded-full bg-white/15 overflow-hidden">
+              <div className="h-full w-[99%] rounded-full bg-orange-500" />
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -226,4 +150,3 @@ function HeroSection() {
 }
 
 export default HeroSection;
-

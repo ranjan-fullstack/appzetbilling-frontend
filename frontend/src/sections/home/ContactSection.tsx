@@ -4,12 +4,12 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Head Office",
-    value: "AppZet Technologies, India",
+    value: "Odisha, DLF, Cybercity",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
+    value: "+91 96924 28905",
   },
   {
     icon: Mail,

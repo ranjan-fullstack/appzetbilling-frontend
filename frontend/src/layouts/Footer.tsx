@@ -17,8 +17,8 @@ export function Footer() {
           </p>
           <div className="mt-6 space-y-3 text-sm text-slate-300">
             <p className="flex items-center gap-2"><Mail className="h-4 w-4 text-[#6ee22d]" /> hello@appzetbilling.com</p>
-            <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-[#6ee22d]" /> +91 98765 43210</p>
-            <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#6ee22d]" /> India</p>
+            <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-[#6ee22d]" /> +91 96924 28905</p>
+            <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#6ee22d]" /> Odisha, DLF, Cybercity</p>
           </div>
         </div>
         {footerGroups.map((group) => (

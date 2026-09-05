@@ -1,5 +1,6 @@
 
 import {
+  ArrowRight,
   Code2,
   Globe,
   Smartphone,
@@ -23,6 +24,7 @@ const services = [
     bg: "from-sky-100 to-cyan-50",
     iconBg: "bg-sky-500",
     glow: "bg-sky-400/20",
+    link: "https://webdev.appzets.com",
   },
   {
     title: "Mobile App Development",
@@ -47,6 +49,7 @@ const services = [
     bg: "from-pink-100 to-rose-50",
     iconBg: "bg-pink-500",
     glow: "bg-pink-400/20",
+    link: "https://politicalmarketing.appzets.com",
   },
 ];
 
@@ -112,7 +115,7 @@ function ServicesSection() {
 
                     {/* FLOATING BADGE */}
                     <div className="mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white shadow-lg border border-slate-100">
-                      
+
                       <div
                         className={`w-3 h-3 rounded-full ${service.iconBg}`}
                       />
@@ -121,6 +124,19 @@ function ServicesSection() {
                         Premium Solution
                       </span>
                     </div>
+
+                    {/* EXPLORE BUTTON */}
+                    {service.link && (
+                      <a
+                        href={service.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-2xl ${service.iconBg} text-white font-semibold shadow-lg hover:opacity-90 transition`}
+                      >
+                        Explore
+                        <ArrowRight className="h-4 w-4" />
+                      </a>
+                    )}
                   </div>
 
                   {/* HOVER LINE */}

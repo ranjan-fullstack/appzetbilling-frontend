@@ -1,5 +1,6 @@
 import Navbar from "../../sections/home/Navbar";
 import Footer from "../../sections/home/Footer";
+import WhatsAppFloatButton from "../../components/WhatsAppFloatButton";
 
 import HeroSection from "../../sections/home/HeroSection";
 import WhyUsSection from "../../sections/home/WhyUsSection";
@@ -44,6 +45,8 @@ function HomePage() {
       <ContactSection />
 
       <Footer />
+
+      <WhatsAppFloatButton />
     </div>
   );
 }

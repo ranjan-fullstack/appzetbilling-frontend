@@ -1,8 +1,9 @@
 
-import { Globe, Mail, MapPin, Menu, MessageCircle, Phone, Send, X } from "lucide-react";
+import { Mail, Menu, MapPin, Phone, X } from "lucide-react";
 import { useState } from "react";
 
 import logo from "../../assets/weblogo-c.png";
+import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from "../../components/icons/SocialIcons";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -14,9 +15,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Globe, href: "#", label: "Website" },
-  { icon: Send, href: "#", label: "Telegram" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp" },
+  { icon: LinkedinIcon, href: "#", label: "LinkedIn" },
+  { icon: InstagramIcon, href: "#", label: "Instagram" },
+  { icon: FacebookIcon, href: "#", label: "Facebook" },
+  { icon: YoutubeIcon, href: "#", label: "YouTube" },
 ];
 
 function Navbar() {
@@ -26,36 +28,41 @@ function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50">
 
       {/* TOP INFO BAR */}
-      <div className="hidden lg:block bg-[#0b1220]">
-        <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-xs text-slate-300">
+      <div className="hidden lg:block bg-gradient-to-r from-blue-200 via-sky-100 to-blue-200 border-b border-blue-300/60">
+        <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-xs text-slate-700">
           <div className="flex items-center gap-6">
-            <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-orange-400 transition">
-              <Phone className="h-3.5 w-3.5" /> +91 98765 43210
+            <a href="tel:+919692428905" className="flex items-center gap-2 hover:text-orange-500 transition">
+              <Phone className="h-3.5 w-3.5 text-blue-700" /> +91 96924 28905
             </a>
-            <a href="mailto:info@appzet.com" className="flex items-center gap-2 hover:text-orange-400 transition">
-              <Mail className="h-3.5 w-3.5" /> info@appzet.com
+            <span className="h-3.5 w-px bg-blue-300" />
+            <a href="mailto:info@appzet.com" className="flex items-center gap-2 hover:text-orange-500 transition">
+              <Mail className="h-3.5 w-3.5 text-blue-700" /> info@appzet.com
             </a>
-            <span className="hidden xl:flex items-center gap-2 text-slate-400">
-              <MapPin className="h-3.5 w-3.5" /> India
+            <span className="hidden xl:block h-3.5 w-px bg-blue-300" />
+            <span className="hidden xl:flex items-center gap-2 text-slate-600">
+              <MapPin className="h-3.5 w-3.5 text-blue-700" /> Odisha, DLF, Cybercity
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="grid h-7 w-7 place-items-center rounded-full bg-white/10 text-slate-300 transition hover:bg-orange-500 hover:text-white"
-              >
-                <Icon className="h-3.5 w-3.5" />
-              </a>
-            ))}
+          <div className="flex items-center gap-3">
+            <span className="text-slate-500 font-medium">Follow Us:</span>
+            <div className="flex items-center gap-2">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="grid h-7 w-7 place-items-center rounded-full bg-white border border-blue-300 text-blue-700 transition hover:bg-orange-500 hover:border-orange-500 hover:text-white"
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
       {/* MAIN NAV */}
-      <div className="bg-white/95 backdrop-blur-xl shadow-sm">
+      <div className="bg-gradient-to-r from-blue-200/95 via-sky-100/95 to-blue-200/95 backdrop-blur-xl shadow-sm border-b border-blue-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
           <div className="h-20 lg:h-24 flex items-center justify-between">
@@ -101,7 +108,7 @@ function Navbar() {
             {/* MOBILE MENU BUTTON */}
             <button
               onClick={() => setMobileMenu(!mobileMenu)}
-              className="lg:hidden w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-slate-100 flex items-center justify-center"
+              className="lg:hidden w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-blue-200 flex items-center justify-center"
             >
               {mobileMenu ? (
                 <X size={28} className="text-slate-900" />
@@ -118,7 +125,7 @@ function Navbar() {
             mobileMenu ? "max-h-screen" : "max-h-0"
           }`}
         >
-          <div className="px-6 pb-8 bg-white border-t border-slate-100 shadow-xl">
+          <div className="px-6 pb-8 bg-blue-100 border-t border-blue-300 shadow-xl">
 
             <div className="flex flex-col gap-5 pt-6">
               {navLinks.map((link) => (
@@ -134,9 +141,9 @@ function Navbar() {
                 </a>
               ))}
 
-              <div className="flex items-center gap-4 text-sm text-slate-500 pt-2 border-t border-slate-100">
-                <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-orange-500 transition">
-                  <Phone className="h-4 w-4" /> +91 98765 43210
+              <div className="flex items-center gap-4 text-sm text-slate-500 pt-2 border-t border-blue-300">
+                <a href="tel:+919692428905" className="flex items-center gap-2 hover:text-orange-500 transition">
+                  <Phone className="h-4 w-4" /> +91 96924 28905
                 </a>
               </div>
 

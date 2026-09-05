@@ -92,10 +92,10 @@ function Footer() {
               <Mail className="h-4 w-4 text-blue-400 shrink-0" /> info@appzet.com
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-blue-400 shrink-0" /> +91 98765 43210
+              <Phone className="h-4 w-4 text-blue-400 shrink-0" /> +91 96924 28905
             </li>
             <li className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-blue-400 shrink-0" /> India
+              <MapPin className="h-4 w-4 text-blue-400 shrink-0" /> Odisha, DLF, Cybercity
             </li>
             <li className="flex items-center gap-2">
               <Clock className="h-4 w-4 text-blue-400 shrink-0" /> Mon – Sat, 9:30–6:30 IST

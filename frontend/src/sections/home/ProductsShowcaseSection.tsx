@@ -153,6 +153,54 @@ function ProductsShowcaseSection() {
             </div>
           </div>
 
+        {/* APPZET ERP CARD */}
+        <div className="mt-8 group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white hover:border-orange-200 shadow-sm hover:shadow-2xl transition-all duration-500 grid lg:grid-cols-2">
+          <div className="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-white text-2xl font-black shadow-lg">
+                ERP
+              </div>
+              <div>
+                <h3 className="text-3xl font-black text-slate-900">AppZet ERP</h3>
+                <div className="mt-2 w-14 h-1 rounded-full bg-orange-500" />
+              </div>
+            </div>
+
+            <p className="mt-6 text-slate-600 leading-relaxed max-w-md">
+              GST billing and inventory software for traders and shops in
+              Odisha. Invoicing, multi-godown stock, customer and supplier
+              dues, purchases, and accounting reports, with role-based access
+              for every branch.
+            </p>
+
+            <div className="mt-8 flex items-center">
+              <a
+                href="https://appzeterp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+              >
+                Explore AppZet ERP
+                <ArrowRight size={18} />
+              </a>
+            </div>
+          </div>
+
+          <div className="relative h-[240px] lg:h-auto bg-gradient-to-br from-orange-50 to-amber-100 flex items-center justify-center overflow-hidden order-1 lg:order-2">
+            <div className="absolute w-56 h-56 rounded-full bg-orange-200/40 blur-3xl" />
+            <div className="relative z-10 grid grid-cols-2 gap-3 p-6">
+              {["GST Invoices", "Stock & Godowns", "Parties & Dues", "Reports"].map((label) => (
+                <div
+                  key={label}
+                  className="bg-white rounded-2xl border border-orange-100 shadow-lg px-5 py-4 text-sm font-bold text-slate-800 text-center"
+                >
+                  {label}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* MODULE GRID */}
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {productItems.map((item) => {

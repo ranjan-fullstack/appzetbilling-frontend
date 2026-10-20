@@ -1,5 +1,5 @@
 import { ArrowUp, Clock, Globe, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
-import logo from "../../assets/weblogo-w-400x121.png";
+import logo from "../../assets/appzet-logo.jpg";
 
 const socialLinks = [
   { icon: Globe, href: "#", label: "Website" },
@@ -35,7 +35,7 @@ function Footer() {
           <img
             src={logo}
             alt="AppZet Logo"
-            className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
+            className="h-14 sm:h-16 lg:h-20 w-auto object-contain bg-white rounded-lg px-3 py-1"
           />
           <p className="mt-6 text-slate-400 leading-relaxed max-w-xs">
             AppZet is a technology company orchestrating smart billing, websites,

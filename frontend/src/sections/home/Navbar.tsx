@@ -2,7 +2,7 @@
 import { Mail, Menu, MapPin, Phone, X } from "lucide-react";
 import { useState } from "react";
 
-import logo from "../../assets/weblogo-c.png";
+import logo from "../../assets/appzet-logo.jpg";
 import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from "../../components/icons/SocialIcons";
 
 const navLinks = [
@@ -28,7 +28,7 @@ function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50">
 
       {/* TOP INFO BAR */}
-      <div className="hidden lg:block bg-gradient-to-r from-blue-200 via-sky-100 to-blue-200 border-b border-blue-300/60">
+      <div className="hidden lg:block bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-xs text-slate-700">
           <div className="flex items-center gap-6">
             <a href="tel:+919692428905" className="flex items-center gap-2 hover:text-orange-500 transition">
@@ -62,7 +62,7 @@ function Navbar() {
       </div>
 
       {/* MAIN NAV */}
-      <div className="bg-gradient-to-r from-blue-200/95 via-sky-100/95 to-blue-200/95 backdrop-blur-xl shadow-sm border-b border-blue-300">
+      <div className="bg-white shadow-sm border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
           <div className="h-20 lg:h-24 flex items-center justify-between">

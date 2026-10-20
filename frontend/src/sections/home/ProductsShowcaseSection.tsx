@@ -1,6 +1,70 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BarChart3, Receipt, ShieldCheck, ShoppingCart, Users, Warehouse } from "lucide-react";
+import type { ComponentType } from "react";
 import { productItems } from "../../data/siteData";
+
+type ModuleItem = {
+  title: string;
+  description: string;
+  icon: ComponentType<{ className?: string; size?: number }>;
+  status?: string;
+};
+
+const erpItems: ModuleItem[] = [
+  { title: "GST Invoices", description: "CGST, SGST and IGST split, HSN codes, and credit notes.", icon: Receipt },
+  { title: "Stock & Godowns", description: "Multiple godowns, stock transfers, stock counts, and low-stock alerts.", icon: Warehouse },
+  { title: "Parties & Dues", description: "Customer and supplier ledgers with outstanding dues.", icon: Users },
+  { title: "Purchases & Suppliers", description: "Purchase bills, returns, and supplier payments.", icon: ShoppingCart },
+  { title: "Accounts & Reports", description: "Sales, purchase, profit and loss, balance sheet, and GST reports.", icon: BarChart3 },
+  { title: "Staff, Roles & Branches", description: "Role-based access limited to each person's branch.", icon: ShieldCheck },
+];
+
+const themes = {
+  blue: {
+    card: "hover:border-blue-200",
+    iconBox: "bg-blue-50 group-hover:bg-blue-600",
+    icon: "text-blue-600",
+    status: "text-blue-600",
+  },
+  purple: {
+    card: "hover:border-purple-200",
+    iconBox: "bg-purple-50 group-hover:bg-purple-600",
+    icon: "text-purple-600",
+    status: "text-purple-600",
+  },
+};
+
+function ModuleGrid({ items, theme }: { items: ModuleItem[]; theme: keyof typeof themes }) {
+  const t = themes[theme];
+  return (
+    <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map((item) => {
+        const Icon = item.icon;
+        return (
+          <div
+            key={item.title}
+            className={`group rounded-2xl border border-slate-200 bg-white p-6 ${t.card} hover:shadow-lg transition-all duration-300`}
+          >
+            <div className="flex items-center gap-4">
+              <div className={`w-12 h-12 rounded-xl ${t.iconBox} flex items-center justify-center transition-colors duration-300 shrink-0`}>
+                <Icon className={`${t.icon} group-hover:text-white transition-colors duration-300`} size={22} />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900">{item.title}</h4>
+                {item.status && (
+                  <span className={`text-[11px] font-bold uppercase tracking-wide ${t.status}`}>
+                    {item.status}
+                  </span>
+                )}
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-slate-600">{item.description}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 function ProductsShowcaseSection() {
   return (
@@ -153,16 +217,19 @@ function ProductsShowcaseSection() {
             </div>
           </div>
 
+        {/* APPZETBILLING MODULES */}
+        <ModuleGrid items={productItems} theme="blue" />
+
         {/* APPZET ERP CARD */}
-        <div className="mt-8 group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white hover:border-orange-200 shadow-sm hover:shadow-2xl transition-all duration-500 grid lg:grid-cols-2">
+        <div className="mt-8 group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white hover:border-purple-200 shadow-sm hover:shadow-2xl transition-all duration-500 grid lg:grid-cols-2">
           <div className="p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-white text-2xl font-black shadow-lg">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-400 flex items-center justify-center text-white text-2xl font-black shadow-lg">
                 ERP
               </div>
               <div>
                 <h3 className="text-3xl font-black text-slate-900">AppZet ERP</h3>
-                <div className="mt-2 w-14 h-1 rounded-full bg-orange-500" />
+                <div className="mt-2 w-14 h-1 rounded-full bg-purple-500" />
               </div>
             </div>
 
@@ -178,7 +245,7 @@ function ProductsShowcaseSection() {
                 href="https://appzeterp.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
               >
                 Explore AppZet ERP
                 <ArrowRight size={18} />
@@ -186,13 +253,13 @@ function ProductsShowcaseSection() {
             </div>
           </div>
 
-          <div className="relative h-[240px] lg:h-auto bg-gradient-to-br from-orange-50 to-amber-100 flex items-center justify-center overflow-hidden order-1 lg:order-2">
-            <div className="absolute w-56 h-56 rounded-full bg-orange-200/40 blur-3xl" />
+          <div className="relative h-[240px] lg:h-auto bg-gradient-to-br from-purple-50 to-violet-100 flex items-center justify-center overflow-hidden order-1 lg:order-2">
+            <div className="absolute w-56 h-56 rounded-full bg-purple-200/40 blur-3xl" />
             <div className="relative z-10 grid grid-cols-2 gap-3 p-6">
               {["GST Invoices", "Stock & Godowns", "Parties & Dues", "Reports"].map((label) => (
                 <div
                   key={label}
-                  className="bg-white rounded-2xl border border-orange-100 shadow-lg px-5 py-4 text-sm font-bold text-slate-800 text-center"
+                  className="bg-white rounded-2xl border border-purple-100 shadow-lg px-5 py-4 text-sm font-bold text-slate-800 text-center"
                 >
                   {label}
                 </div>
@@ -201,35 +268,8 @@ function ProductsShowcaseSection() {
           </div>
         </div>
 
-        {/* MODULE GRID */}
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {productItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.title}
-                className="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-blue-200 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300 shrink-0">
-                    <Icon className="text-blue-600 group-hover:text-white transition-colors duration-300" size={22} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900">{item.title}</h4>
-                    {item.status && (
-                      <span className="text-[11px] font-bold uppercase tracking-wide text-blue-600">
-                        {item.status}
-                      </span>
-                    )}
-                  </div>
-                </div>
-                <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                  {item.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+        {/* APPZET ERP MODULES */}
+        <ModuleGrid items={erpItems} theme="purple" />
       </div>
     </section>
   );

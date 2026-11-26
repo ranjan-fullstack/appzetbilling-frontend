@@ -11,6 +11,7 @@ const quickLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Products", href: "#products" },
+  { label: "Business Solutions", href: "https://solutions.appzets.com/" },
   { label: "Services", href: "#services" },
   { label: "Industries", href: "#industry" },
   { label: "Contact", href: "#contact" },

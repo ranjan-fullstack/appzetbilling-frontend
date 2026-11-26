@@ -8,6 +8,7 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from "../../co
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Products", href: "#products" },
+  { label: "Solutions", href: "https://solutions.appzets.com/" },
   { label: "Services", href: "#services" },
   { label: "Industry Serve", href: "#industry" },
   { label: "About Us", href: "#about" },
@@ -77,7 +78,7 @@ function Navbar() {
             </div>
 
             {/* DESKTOP MENU */}
-            <nav className="hidden lg:flex items-center gap-10">
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-10">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
